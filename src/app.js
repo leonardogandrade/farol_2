@@ -1,6 +1,6 @@
 const server = require('./server');
-const repository = require('./models/devotional-model');
-const { dbConnect } = require('./db/connection');
+const repository = require('../src/models/devotional-model');
+const { dbConnect } = require('../src/db/connection');
 const app = server(repository);
 const PORT = process.env.PORT;
 

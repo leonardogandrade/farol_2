@@ -2,10 +2,11 @@
   "name": "Farol",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon src/app.js"
+    "dev": "nodemon src/app.js",
+    "start": "node src/app.js"
   },
   "keywords": [],
   "author": "",
@@ -16,6 +17,9 @@
     "mongoose": "^6.3.4",
     "mongoose-paginate": "^5.0.3",
     "supertest": "^6.2.3"
+  },
+  "engines": {
+    "node": "14.x"
   },
   "devDependencies": {
     "nodemon": "^2.0.16"
