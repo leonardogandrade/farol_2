@@ -2,8 +2,10 @@ const repository = require('../db/repo/devotional-repo');
 
 module.exports = (app, repo) => {
     // Get dotay's devotional
-    app.get('/devotional', async (req, res, next) => {
-        const result = await repository.getTodayDevotional(repo);
+    app.get('/devotional/:date', async (req, res, next) => {
+        const todayDate = req.params['date']
+        const result = await repository.getTodayDevotional(repo, todayDate);
+
         if (result) {
             res.status(200).json(result);
         } else {

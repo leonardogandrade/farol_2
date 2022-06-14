@@ -17,7 +17,7 @@ const devotionalSchema = mongoose.Schema({
         type: String,
         required: true
     },
-    text: {
+    application: {
         type: String,
         required: true
     },

@@ -10,15 +10,10 @@ module.exports = {
 
         return result;
     },
-    async getTodayDevotional(repo) {
+    async getTodayDevotional(repo, todayDate) {
         let result;
-        let date = new Date();
-        const cur_month = date.getMonth() + 1
-        const month = cur_month.toString().padStart(2, '0');
-        const current_date = `${date.getFullYear()}-${month}-${date.getDate()}`
-
         try {
-            result = await repo.findOne({ 'date': current_date })
+            result = await repo.findOne({ 'date': todayDate })
         } catch (err) {
             console.log(`ERROR: ${err}`)
         }
